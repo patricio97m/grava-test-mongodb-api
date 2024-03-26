@@ -7,12 +7,13 @@ const routes = require('./lib/routes');
 const expressWinston = require('express-winston');
 const app = express();
 const cors = require('cors');
+const mongodbHost = '127.0.0.1';
 
 function connectMongoose() {
     const mongoose = require('mongoose');
     mongoose.Promise = Promise;
     return mongoose.connect(
-        `mongodb://${process.env.MONGODB_HOST}:${process.env.MONGODB_PORT}/${process.env.MONGODB_DB}`
+        `mongodb://${mongodbHost}:27017/grava`
     );
 }
 
