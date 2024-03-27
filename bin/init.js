@@ -6,7 +6,7 @@ const logger = require('../lib/logger');
 return app.connectMongoose()
     .then(() => {
         const application = app.initialize();
-        application.listen(8080);
+        application.listen(process.env.SERVER_PORT);
         logger.info(`Your server is listening on port ${process.env.SERVER_PORT}`);
     })
     .catch((error) => {

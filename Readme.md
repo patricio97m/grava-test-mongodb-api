@@ -28,9 +28,9 @@ API creada con la finalidad de poder crear, editar y ver usuarios.
 }
 ```
 ### users-get
-// POST http://localhost:8080/api/users/?enabled=true
+// GET http://localhost:8080/api/users/?enabled=true
 
-// POST http://localhost:8080/api/users/?enabled=false
+// GET http://localhost:8080/api/users/?enabled=false
 
 ### user-disable
 // POST http://localhost:8080/api/users/:id/disable
